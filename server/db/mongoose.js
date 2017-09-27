@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const addressDB =
   process.env.MONGODB ||
-  "mongodb://victorh:victorh@ds149874.mlab.com:49874/evercheck-test-8";
+  'mongodb://victorh:victorh@ds149874.mlab.com:49874/evercheck-test-8';
 const port = process.env.PORT || 3000;
 
 /* to avoid the warning

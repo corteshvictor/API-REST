@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Schema to define list of document properties specialties
@@ -24,6 +24,6 @@ const SpecialtySchema = Schema({
 });
 
 module.exports = {
-  Specialties: mongoose.model("Specialties", SpecialtySchema),
+  Specialties: mongoose.model('Specialties', SpecialtySchema),
   SpecialtySchema
 };

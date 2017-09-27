@@ -1,6 +1,6 @@
-const { ObjectID } = require("mongodb");
-const Providers = require("../models/providers");
-const Specialties = require("./specialties");
+const { ObjectID } = require('mongodb');
+const Providers = require('../models/providers');
+const Specialties = require('./specialties');
 
 const saveProvider = async (req, res) => {
   const {
@@ -73,7 +73,7 @@ const updateProvider = async (req, res) => {
         (ObjectID.isValid(specialtyId) || specialtyId === undefined)
       )
     )
-      return res.status(400).send({ message: "Bad Request - Invalid ID" });
+      return res.status(400).send({ message: 'Bad Request - Invalid ID' });
 
     const specialtyObject = await Specialties.getSpecialtyById(specialtyId);
     update.completedAt = new Date();
@@ -86,7 +86,7 @@ const updateProvider = async (req, res) => {
     if (!provider) res.status(404).send();
     res.status(200).send({ provider });
   } catch (e) {
-    res.status(400).send({ message: "por catch" });
+    res.status(400).send({ message: 'por catch' });
   }
 };
 

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const { SpecialtySchema } = require("./specialties.js");
+const { SpecialtySchema } = require('./specialties.js');
 
 // Schema to define list of document properties providers
 const ProvidersSchema = Schema({
@@ -28,7 +28,8 @@ const ProvidersSchema = Schema({
     minlength: 1,
     trim: true
   },
-  specialty: SpecialtySchema,
+  // each document from the specialties collection, is embedded, in a document from the suppliers collection.
+  specialty: SpecialtySchema, //the specialty document is embedded in the provider document.
   projectedStartDate: {
     type: Date
   },
@@ -61,4 +62,4 @@ const ProvidersSchema = Schema({
   }
 });
 
-module.exports = mongoose.model("Providers", ProvidersSchema);
+module.exports = mongoose.model('Providers', ProvidersSchema);

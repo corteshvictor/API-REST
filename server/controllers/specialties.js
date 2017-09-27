@@ -1,4 +1,4 @@
-const { Specialties } = require("../models/specialties");
+const { Specialties } = require('../models/specialties');
 
 const getSpecialties = () => {
   return Specialties.find({});
